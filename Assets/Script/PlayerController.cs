@@ -7,9 +7,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 1f;
 
-    // [SerializeField]
-    // private float missileSpeed  = 10f;
-
     [SerializeField]
     private GameObject MissilePrefab;
 
@@ -38,8 +35,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             GameObject Missile = Instantiate(MissilePrefab, transform.position, Quaternion.identity);
-            //Rigidbody2D MissileRigid = GetComponent<Rigidbody2D>();
-            //GameObject.Find("Missile").transform.position = new Vector3(MissileX ,MissilePrefab.transform.position.y * missileSpeed, 0f);
         }
     }
 }
