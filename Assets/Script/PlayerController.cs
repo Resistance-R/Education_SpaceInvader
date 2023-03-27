@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
-        float MissileX = GameObject.Find("Player").transform.position.x;
         if(Input.GetKeyDown(KeyCode.Space))
         {
             GameObject Missile = Instantiate(MissilePrefab, transform.position, Quaternion.identity);
