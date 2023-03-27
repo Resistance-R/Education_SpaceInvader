@@ -37,4 +37,14 @@ public class PlayerController : MonoBehaviour
             GameObject Missile = Instantiate(MissilePrefab, transform.position, Quaternion.identity);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.collider.tag == "EnemyMisslie")
+        {
+            Destroy(this.gameObject);
+            Time.timeScale = 0f;
+            Debug.Log("Game is Over!");
+        }
+    }
 }

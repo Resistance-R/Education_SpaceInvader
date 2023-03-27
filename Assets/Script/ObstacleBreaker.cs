@@ -19,7 +19,7 @@ public class ObstacleBreaker : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Missile")
+        if (collision.collider.tag == "Missile" || collision.collider.tag == "EnemyMisslie")
         {
             fullDefend -= 1f;
 

@@ -30,7 +30,7 @@ public class MissileController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Destroy")
+        if (collision.collider.tag == "Destroy" || collision.collider.tag =="Enemy")
         {
             Destroy(this.gameObject);
         }
